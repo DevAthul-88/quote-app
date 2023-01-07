@@ -1,0 +1,11 @@
+.active {
+  text-decoration: underline !important;
+}
+
+.myspinner {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
