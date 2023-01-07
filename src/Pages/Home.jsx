@@ -19,8 +19,8 @@ function Home() {
               Generator. Whether for Instagram, Speeches, WhatsApp Statuses or
               just for you to think and inspire.
             </p>
-            <Link to="/explore" className="btn btn-primary">
-              Explore
+            <Link to="/random" className="btn btn-primary">
+              Get started
             </Link>
           </div>
           <div className="col-md-4">
