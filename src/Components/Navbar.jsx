@@ -1,10 +1,11 @@
-import React from "react";
+import React , {useState} from "react";
 import { Link } from "wouter";
 import Logo from "../assets/logo.svg";
 import { getTags } from "../features/tagsSlice";
 import ActiveLink from "./ActiveLink";
 
 function Navbar() {
+  const [open , setOpen] = useState(false)
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -14,6 +15,7 @@ function Navbar() {
         <button
           className="navbar-toggler"
           type="button"
+          onClick={() => {setOpen(!open)}}
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
@@ -23,7 +25,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse justify-content-end navbar-collapse"
+          className={`collapse  justify-content-end navbar-collapse ${open ? "show" : "hide"}`}
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
